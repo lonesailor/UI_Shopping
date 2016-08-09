@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>All Electronics</title>
+        <style>
+            .feature {
+                text-align:center;
+                background-color: darksalmon;
+                height:20%; 
+                width:100%;
+                border: 1px solid powderblue;
+            }
+            
+            .menu {
+                color: brown;
+                text-align: center;
+                border-bottom: solid;
+                border-bottom-width:medium;
+                margin:20%;
+            }
+            .right-container{
+                height:130%;
+                float:right;
+                display:block;
+                position:relative;
+                width:79%;
+/*                border: 1px solid powderblue;*/
+            }
+            .left-container{
+                height:100%;
+                float:left;
+                position:relative; 
+                width:20%; 
+                border: 2px solid #73AD21;
+                border-radius: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="height=100%; width:100%;">
+            <div class="feature">
+                <h2>All Electronic Supplies</h2>
+            </div>
+            <div style="height:450px">
+                <div class='left-container'>
+                    <div class="menu">TVs</div>
+                    <div class="menu">Cell Phones</div>
+                    <div class="menu">Laptops</div>
+                    <div class="menu">Tablets</div>
+                    <div class="menu">Mice</div>
+                    <div class="menu">Guitars</div>
+                </div>
+                <div class='right-container'>
+                    <div style="height:40%; width:100% ; background-color:yellow; border-radius: 25px; border: 2px solid #73AD21; margin-top:2px;">Image Slider
+                        <img class="mySlides" src="/ShoppingCart_Images/cell_phones/HTC10.png" style="width:100%; height:100%; margin-top:-2%;">
+                        <img class="mySlides" src="/ShoppingCart_Images/cell_phones/LG_G5.png" style="width:100%; height:100%; margin-top:-2%;">
+                    </div>
+                    <div style="height:30%; width:100%; border-radius: 25px; border: 2px solid #73AD21; margin-top:2px;">CEO Message</div>
+                    <div style="height:30%; width:100%; border-radius: 25px; border: 2px solid #73AD21; margin-top:2px;">Vice President Message</div>
+
+                </div>
+            </div>
+        </div>
+    
+    <script>
+        var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+    </script>
+    </body>
+</html>
